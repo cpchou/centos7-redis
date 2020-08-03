@@ -9,9 +9,9 @@ RUN yum -y install epel-release
 RUN yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 RUN yum -y --enablerepo=remi,remi-test install redis
 
-RUN systemctl daemon-reload
-RUN systemctl enable redis.service
-RUN systemctl start redis.service
+#RUN systemctl daemon-reload
+#RUN systemctl enable redis.service
+#RUN systemctl start redis.service
 
 EXPOSE      6379
 EXPOSE      6380
