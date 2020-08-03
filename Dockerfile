@@ -1,9 +1,12 @@
+FROM library/centos:7
+ENV LANG zh_TW.UTF-8
+ENV LANGUAGE zh_TW.UTF-8
+#ENV LC_ALL zh_TW.UTF-8
+ENV TZ=Asia/Taipei
+
 RUN yum -y update
-
-
 RUN yum -y install epel-release
 RUN yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-RUN yum -y --enablerepo=remi,remi-test install redis
 RUN yum -y --enablerepo=remi,remi-test install redis
 
 RUN systemctl daemon-reload
